@@ -43,7 +43,6 @@ function PlayerChange(){
 }
 
 function verifyWin(){
-    console.log(1)
     roundWon=false;
     for(let i=0;i<=7;i++){
         let check_comb=win_comb[i];
@@ -61,18 +60,7 @@ function verifyWin(){
     if(roundWon)
     {
         statusDisplay.innerHTML=playerWon();
-        if(check_comb==win_comb[0]||check_comb==win_comb[1]||check_comb==win_comb[2])
-        {
-            document.querySelector('.scratch_hor');
-        }
-        else if(check_comb==win_comb[3]||check_comb==win_comb[4]||check_comb==win_comb[5])
-        {
-            document.querySelector('.scratch_ver');
-        }
-        else if(check_comb==win_comb[6]||check_comb==win_comb[7])
-        {
-            document.querySelector('.scratch_dig');
-        }
+        scratch(check_comb);
         gameStatus=false;
         return;
     }
@@ -84,6 +72,51 @@ function verifyWin(){
         return;
     }
     PlayerChange();
+}
+function scratch(check_comb)
+{
+    if(check_comb==win_comb[0])
+        {
+            document.getElementById('scratch_hor1').style.visibility="visible";
+            //gameStatus=false;
+        }
+        else if(check_comb==win_comb[1])
+        {
+            document.getElementById('scratch_hor2').style.visibility="visible";
+           // gameStatus=false;
+        }
+        else if(check_comb==win_comb[2])
+        {
+            document.getElementById('scratch_hor3').style.visibility="visible";
+            //gameStatus=false;
+        }
+        else if(check_comb==win_comb[3])
+        {
+            document.getElementById('scratch_ver1').style.visibility="visible";
+            //gameStatus=false;
+        }
+        else if(check_comb==win_comb[4])
+        {
+            document.getElementById('scratch_ver2').style.visibility="visible";
+           // gameStatus=false;
+        }
+        else if(check_comb==win_comb[5])
+        {
+            document.getElementById('scratch_ver3').style.visibility="visible";
+           // gameStatus=false;
+        }
+        else if(check_comb==win_comb[6])
+        {
+            document.getElementById('scratch_dig1').style.visibility="visible";
+           // gameStatus=false;
+        }
+        else if(check_comb==win_comb[7])
+        {
+            document.getElementById('scratch_dig2').style.visibility="visible";
+           // gameStatus=false;
+        }
+        //gameStatus=false;
+        return;
 }
 
 function gameRestart(){
