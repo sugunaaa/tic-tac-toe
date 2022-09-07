@@ -130,5 +130,5 @@ function gameRestart(){
 }
 
 document.querySelectorAll('.cell').forEach(cell=>cell.addEventListener('click',CellClickedCheck));
-document.querySelector('.game_restart').addEventListener('click',gameRestart);
+document.querySelector('.game_restart').addEventListener('click',gameRestart)
 
