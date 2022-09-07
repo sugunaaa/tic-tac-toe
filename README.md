@@ -1,2 +1,4 @@
-# tic-tac-toe
-tic-tac-toe web app using html,css,js
+Fully working Tic-Tac-Toe Web App using:
+* HTML
+* CSS
+* JavaScript
